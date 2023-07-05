@@ -4,7 +4,7 @@
 ; Replaces some specifics verbs with more fitting synonyms. ("Bambi laughs" => "Bambi giggles")
 
 loadVerbsSynonyms(state) {
-	if (state == true) {
+	if (toBool(state) == true) {
 		Hotstring("B Z")
 		Hotstring(":bambi: laugh", " giggles")
 		Hotstring(":bambi: laughs", " giggles")

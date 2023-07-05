@@ -4,7 +4,7 @@
 ; aint, aint, gonna, wanna, etc... (will override some formal contractions)
 
 loadContractionsInformal(state) {
-	if (state == true) {
+	if (toBool(state) == true) {
 		Hotstring("B Z")
 
 		; Generic negations

@@ -3,14 +3,14 @@
 ;------------------------------------------------------------------------------
 ; Initialize some parts of the scripts based on the settings
 
-Hotstring("EndChars", "-()[]{}:;""/\,.?!`n `t")
+; Hotstring("EndChars", "-()[]`{}:;" "/\,.?!`n `t")
 
 loadContractionsFormal(formalContractions)
 loadContractionsInformal(informalContractions)
-loadBambiPronouns(bambiMode)
+loadBambiPronouns(bambiMode, nameReplace, possessivePronoun)
 loadGiggles(giggles)
 loadWordReplacer(wordReplacer)
-load3rdPersonVerbs(bambiMode)
+load3rdPersonVerbs(bambiMode, nameReplace)
 loadWordsRandomizer(wordsRandomizer)
 loadPhonetic(phonetic)
 loadVerbsSynonyms(verbsSynonyms)

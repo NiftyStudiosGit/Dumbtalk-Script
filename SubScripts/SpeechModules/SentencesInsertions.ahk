@@ -7,35 +7,35 @@
 ; Script had some issues and weirdness with random insertion, so it had to only be allowed after some specific words
 loadHesitationsAndHornyThoughts(state) {
 	Hotstring("B0 Z")
-	Hotstring(":*:and ", Func("insertHesitationsAndHornyThoughts"))
-	Hotstring(":*:to ", Func("insertHesitationsAndHornyThoughts"))
-	Hotstring(":?*:, ", Func("insertHesitationsAndHornyThoughts"))
+	Hotstring(":*:and ", insertHesitationsAndHornyThoughts)
+	Hotstring(":*:to ", insertHesitationsAndHornyThoughts)
+	Hotstring(":?*:, ", insertHesitationsAndHornyThoughts)
 	if (formalContractions = false) { ; Breaks formal contraction, only activate these hotstrings if it's off
-		Hotstring(":*:could ", Func("insertHesitationsAndHornyThoughts"))
-		Hotstring(":*:should ", Func("insertHesitationsAndHornyThoughts"))
-		Hotstring(":*:would ", Func("insertHesitationsAndHornyThoughts"))
+		Hotstring(":*:could ", insertHesitationsAndHornyThoughts)
+		Hotstring(":*:should ", insertHesitationsAndHornyThoughts)
+		Hotstring(":*:would ", insertHesitationsAndHornyThoughts)
 	}
 	Hotstring("reset")
 }
 
-insertHesitationsAndHornyThoughts() {
+insertHesitationsAndHornyThoughts(name) {
 	;TODO Rework the way probabilities are handled (Maybe add configuration from the .ini)
-	Random, Var, 1, 5 ; will trigger one of the next two outcomes
+	Var := Random(1, 5) ; will trigger one of the next two outcomes
 	if (var <= 3) {
-		if (hesitationMarks) {
-			Random, Var, 1, 5 ; 1 chance out of 5 to trigger this if we enter this block
+		if (toBool(hesitationMarks)) {
+			Var := Random(1, 5) ; 1 chance out of 5 to trigger this if we enter this block
 			if (var = 1) {
 				sStrings := "like... |like, |like, |hmm... |like... |uhhh... |ummm... |um |er |uh |"
 				randomString(sStrings, 10)
 			}
 		}
 	} else {
-		if (hornyThoughts = true) {
-			Random, Var, 1, 15 ; 1 chance out of 15 to trigger this if we enter this block
+		if (toBool(hornyThoughts) = true) {
+			Var := Random(1, 15) ; 1 chance out of 15 to trigger this if we enter this block
 			if (var = 1) {
-				SendInput {BS 1}
-				if (bambiMode = true) {
-					sStrings := "... *god bambi is horny*... |... *bambi needs to be fucked*... |... *bambi wants to suck cock soooooo bad*... |... *gosh, bambi is like, so ditzy*... |... *Why is bambi so wet?*... |"
+				SendInput "{BS 1}"
+				if (toBool(bambiMode) = true) {
+					sStrings := "... *god " . nameReplace . " is horny*... |... *" . nameReplace . " needs to be fucked*... |... *" . nameReplace . " wants to suck cock soooooo bad*... |... *gosh, " . nameReplace . " is like, so ditzy*... |... *Why is " . nameReplace . " so wet?*... |"
 				} else {
 					sStrings := "... *god I'm horny*... |... *I need to be fucked*... |... *I want to suck cock soooooo bad*... |... *gosh, I'm like, so ditzy*... |... *Why am I so wet?*... |"
 				}
@@ -51,14 +51,14 @@ insertHesitationsAndHornyThoughts() {
 ;---------------------------------------------------------
 thoughtsBetweenWords(state) {
 	Hotstring("B0 Z")
-	Hotstring(":?*: ", Func("insertsThoughtsBetweenWords"))
+	Hotstring(":?*: ", insertsThoughtsBetweenWords)
 	Hotstring("reset")
 }
 
 insertsThoughtsBetweenWords() {
-	Random, Var, 1, 50
+	Var := Random(1, 50)
 	if (var = 1) {
-		SendInput {BS 1}
+		SendInput "{BS 1}"
 		; SendInput {left 2}
 		sStrings := ", like, | hmmm... | uhhh... | ummm... | um | er | uh |"
 		randomString(sStrings, 7)

@@ -9,14 +9,14 @@
  * num: Number of items in the list
  */
 randomString(RandomStuff, num) {
-	Random, RND, 1, %num%
-	Loop, Parse, RandomStuff, |
+	RND := Random(1, num)
+	Loop Parse RandomStuff, "|" {
 		If ( RND = A_Index ) {
-			SendInput, %A_LoopField%
-			SendInput, %A_EndChar%
+			SendInput(A_LoopField)
+			SendInput(A_EndChar)
 			Break
 		}
-	return	
+	}
 }
 
 /*
@@ -24,6 +24,10 @@ randomString(RandomStuff, num) {
  * string: String to add
  * numBackspace: Number of Backspace to perform before inserting the new string
  */
-BsSendInput(string := "", numBackspace := 0) {
-	SendInput, {BS %numBackspace%}%string%{%A_EndChar%}{Space}
+BsSendInput(string := "", numBackspace := "0") {
+	SendInput "{BS" . numBackspace . "}" . string . "{" A_EndChar "}{Space}"
+}
+
+toBool(v) {
+	return v = "true"
 }

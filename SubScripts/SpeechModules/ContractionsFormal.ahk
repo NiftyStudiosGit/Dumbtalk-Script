@@ -4,11 +4,11 @@
 ; aren't, could've, how're, etc...
 
 loadContractionsFormal(state) {
-	if (state == true) {
+	if (toBool(state) == true) {
 		Hotstring("B Z0")
 
 		; Generic
-		Hotstring("::must have", "must've")
+		Hotstring "::must have", "must've"
 		Hotstring("::could have", "could've")
 		Hotstring("::should have", "should've")
 		Hotstring("::would have", "would've")

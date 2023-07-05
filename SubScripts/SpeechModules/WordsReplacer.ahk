@@ -4,7 +4,7 @@
 ; Replaces common words with simpler or more bimbo-like versions. (ie. "best" => "bestest", "confused" => "ditzy"...)
 
 loadWordReplacer(state) {
-	if (state == true) {
+	if (toBool(state) == true) {
 		Hotstring("B Z0")
 		Hotstring("::okay", "okie")
 		Hotstring("::ok", "okie")

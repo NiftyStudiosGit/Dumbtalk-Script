@@ -4,7 +4,7 @@
 ; Replaces common laugh sounds (haha, lol, etc...) with *giggles*
 
 loadGiggles(state) {
-	if (state == true) {
+	if (toBool(state) == true) {
 		Hotstring("B Z0")
 		Hotstring("::hehe", "*giggles*")
 		Hotstring("::haha", "*giggles*")

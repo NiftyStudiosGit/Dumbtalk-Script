@@ -36,23 +36,29 @@ Native Compile SETTINGS END
 ; BAMBI DUMBTALK SCRIPT
 ;------------------------------------------------------------------------------
 ; a fun script made by Bambi Trisky for her fellow bambi friends <3
+; Conversion to AHK v2 and modifications done by LexiOfTheEvening
 
-version = 1.0.1
+version := 2.0
 #Include %A_ScriptDir%\SubScripts\Utils\Settings.ahk
 
-SetTitleMatchMode, 2
-GroupAdd, handledApps, %applicationHandled%
-#IfWinActive ahk_group handledApps
+SetTitleMatchMode 2
+handledApps := applicationHandled
+Loop(handledApps.Length) {
+    handledApp := handledApps[A_Index]
+    GroupAdd "handledApps", handledApp
+}
+#HotIf WinActive("Notepad")
 
-#InstallKeybdHook
-#NoEnv
+InstallKeybdHook()
 #SingleInstance force
-SetWorkingDir %A_ScriptDir%
 
 ;------------------------------------------------------------------------------
 ; SubScripts Imports
 ;------------------------------------------------------------------------------
 ; Order matters: Hotstrings in Includes at the bottom have a higher priority
+
+; Helper Files
+FileInstall A_ScriptDir "\Resources\verbs\verbList.csv", "verbList.csv", 1
 
 ; Utils
 #Include %A_ScriptDir%\SubScripts\Utils\Initializer.ahk

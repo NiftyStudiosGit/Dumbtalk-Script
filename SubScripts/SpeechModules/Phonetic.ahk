@@ -4,7 +4,7 @@
 ; Replaces some common word sounds with phonetically similar ones (ie. "-ome" => "-um", "-ing" => "-in'")
 
 loadPhonetic(state) {
-	if (state == true) {
+	if (toBool(state) == true) {
 		Hotstring("B Z")
 		; Place exceptions here, words which shouldn't be altered by the next hotstrings
 		Hotstring("::cock", "cock")

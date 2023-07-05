@@ -3,17 +3,17 @@
 ;------------------------------------------------------------------------------
 ; Forces you to refer to yourself as Bambi (ie. "I" => "Bambi", "My" => "Bambi's"...)
 
-loadBambiPronouns(state) {
-	if (state == true) {
+loadBambiPronouns(state, nameReplace, pronounReplace) {
+	if (toBool(state) == true) {
 		Hotstring("B Z0")
-		Hotstring("::do i", "does bambi")
-		Hotstring("::am i", "is bambi")
-		Hotstring("::have i", "has bambi")
-		Hotstring("::i", "bambi")
-		Hotstring("::me", "bambi")
-		Hotstring("::my", "bambi's")
-		Hotstring("::mine", "bambi's")
-		Hotstring("::myself", "herself")
+		Hotstring("::do i", "does " . nameReplace)
+		Hotstring("::am i", "is " . nameReplace)
+		Hotstring("::have i", "has " . nameReplace)
+		Hotstring("::i", nameReplace)
+		Hotstring("::me", nameReplace)
+		Hotstring("::my", nameReplace . "'s")
+		Hotstring("::mine", nameReplace . "'s")
+		Hotstring("::myself", pronounReplace . "self")
 		Hotstring("reset")
 	}
 }
