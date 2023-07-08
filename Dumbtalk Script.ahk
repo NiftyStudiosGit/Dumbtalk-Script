@@ -1,37 +1,3 @@
-/*
- * * * Compile_AHK SETTINGS BEGIN * * *
-
-[AHK2EXE]
-Exe_File=%In_Dir%\Dumbtalk Script.exe
-Compression=0
-Created_Date=1
-[VERSION]
-Set_Version_Info=1
-Company_Name=Triskelia (Triskel#0001)
-File_Description=Script automatically replacing what you type in discord desktop app with more bimbo-like stuff.
-File_Version=1.0.1.0
-Inc_File_Version=0
-Internal_Name=Dumbtalk Script.ahk
-Legal_Copyright=(c) 2017-2021 Triskelia (Triskel#0001)
-Original_Filename=Dumbtalk Script.ahk
-Product_Name=Dumbtalk Script
-[ICONS]
-Icon_1=%In_Dir%\Resources\img\Dumbtalk-Script-Icon-Running.ico
-Icon_2=%In_Dir%\Resources\img\Dumbtalk-Script-Icon-Running.ico
-Icon_3=%In_Dir%\Resources\img\Dumbtalk-Script-Icon-Paused.ico
-Icon_4=%In_Dir%\Resources\img\Dumbtalk-Script-Icon-Running.ico
-Icon_5=%In_Dir%\Resources\img\Dumbtalk-Script-Icon-Paused.ico
-
-* * * Compile_AHK SETTINGS END * * *
-*/
-
-/*
-Native Compile SETTINGS BEGIN
-; @Ahk2Exe-SetMainIcon %A_ScriptDir%\Resources\img\Dumbtalk-Script-Icon-Running.ico
-; @Ahk2Exe-ExeName %A_ScriptDir%\Dumbtalk Script.ahk
-Native Compile SETTINGS END
-*/
-
 ;------------------------------------------------------------------------------
 ; DUMBTALK SCRIPT
 ;------------------------------------------------------------------------------
@@ -50,7 +16,7 @@ Loop(handledApps.Length) {
     handledApp := handledApps[A_Index]
     GroupAdd "handledApps", handledApp
 }
-#HotIf WinActive("ahk_class Notepad")
+HotIfWinActive "ahk_group handledApps"
 
 InstallKeybdHook
 #SingleInstance force
@@ -63,7 +29,8 @@ Hotstring("EndChars", "-()[]{}:;`"/\,.?!`n`s`t")
 ; Order matters: Hotstrings in Includes at the bottom have a higher priority
 
 ; Helper Files
-FileInstall A_ScriptDir "\Resources\verbs\verbList.csv", "verbList.csv", 1
+FileInstall "verbList.csv", "verbList.csv", 1
+FileInstall "settings.ini", "settings.ini", 1
 
 ; Utils
 #Include %A_ScriptDir%\SubScripts\Utils\Initializer.ahk
