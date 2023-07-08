@@ -1,4 +1,14 @@
-# Bambi Dumbtalk Script Changelog
+# Dumbtalk Script Changelog
+
+## 2.0 (2023-07-09)
+
+### Major Refactoring
+
+- Converted to AHK version 2.0.
+  - Required changing most of the code in small ways
+- De-bambi-fied the overall project, to allow other names to be used for those not keen on Bambi. Still defaults to Bambi
+- Added said functionality to change the name, but also support for potential pronoun changes.
+- Implemented Hotstring chaining properly; previous method used a bug in AHK v1 that didn't carry forward to AHK v2.
 
 ## 1.0.1 (2021-05-15)
 

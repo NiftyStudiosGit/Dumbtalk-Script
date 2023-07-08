@@ -5,7 +5,6 @@
 
 loadWordReplacer(state) {
 	if (toBool(state) == true) {
-		Hotstring("B Z0")
 		Hotstring("::okay", "okie")
 		Hotstring("::ok", "okie")
 		Hotstring("::oki", "okie")

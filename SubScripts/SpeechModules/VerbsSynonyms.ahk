@@ -3,13 +3,13 @@
 ;------------------------------------------------------------------------------
 ; Replaces some specifics verbs with more fitting synonyms. ("Bambi laughs" => "Bambi giggles")
 
-loadVerbsSynonyms(state) {
+loadVerbsSynonyms(state, nameReplace) {
 	if (toBool(state) == true) {
-		Hotstring("B Z")
-		Hotstring(":bambi: laugh", " giggles")
-		Hotstring(":bambi: laughs", " giggles")
-		Hotstring(":bambi: think", " believes") ; Bambi doesn't think
-		Hotstring(":bambi: thinks", " believes")
+		Hotstring(":z:" . nameReplace . " laugh", nameReplace . " giggles") ;TODO: figure out the 'name' prefix issue (only replace when <name> precedes the word)
+		Hotstring(":z:" . nameReplace . " laughs", nameReplace . " giggles")
+		Hotstring(":z:" . nameReplace . " think", nameReplace . " believes") ; Bimbo's don't think
+		Hotstring(":z:" . nameReplace . " thinks", nameReplace . " believes")
 		Hotstring("reset")
 	}
 }
+

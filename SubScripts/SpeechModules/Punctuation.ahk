@@ -5,9 +5,8 @@
 
 loadPunctuation(state) {
 	if (toBool(state) == true) {
-		Hotstring("B0")
-		Hotstring(":*:.", elipisiHandler)
-		Hotstring(":?:.", replacePunctuation)
+		Hotstring(":b0*:.", elipisiHandler)
+		Hotstring(":b0?:.", replacePunctuation)
 	}
 }
 
@@ -18,10 +17,10 @@ elipisiHandler(name) { ; Prevents elipsis "..." to be replaced
 replacePunctuation(name) {
 	nRand := Random(0, 90)
 	if (nRand < 10)	{
-		Send "{BS 2}?{Space}"
+		BsSendInput("?", 2)
 	} else if (nRand < 30) {
-		Send "{BS 2}~{Space}{Space}"
+		SendInput "{BS 2}~{Space}{Space}"
 	} else if (nRand < 40) {
-		Send "{BS 2}{!}{Space}"
+		BsSendInput("{!}", 2)
 	}
 }

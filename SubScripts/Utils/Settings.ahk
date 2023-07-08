@@ -3,20 +3,20 @@
 ;------------------------------------------------------------------------------
 ; Assign setting values from the ini file to global variables
 
-; Bambi Mode: Forces you to refer to yourself as Bambi (ie. "I" => "Bambi", "My" => "Bambi's"...)
-bambiMode_Setting := IniRead(A_ScriptDir "\settings.ini", "SETTINGS", "bambiMode", true)
-global bambiMode := bambiMode_Setting
+; Rename Mode: Forces you to refer to yourself as the provided name (ie. "I" => "Bambi", "My" => "Bambi's"...)
+renameMode_Setting := IniRead(A_ScriptDir "\settings.ini", "SETTINGS", "renameMode", true)
+global renameMode := renameMode_Setting
 
 
-; Name: Defaults to Bambi, but can be changed here.
+; Name: Defaults to Bambi, but can be in settings.ini.
 nameReplace_Setting := IniRead(A_ScriptDir "\settings.ini", "SETTINGS", "nameReplace", "Bambi")
 global nameReplace := nameReplace_Setting
 
-; Personal Pronoun: Defaults to she (ex. she/he/they)
+; Personal Pronoun: Defaults to she (ex. she/he/they), but can be in settings.ini
 personalPronoun_Setting := IniRead(A_ScriptDir "\settings.ini", "SETTINGS", "personalPronoun", "she")
 global personalPronoun := personalPronoun_Setting
 
-; Possessive Pronoun: Defaults to her (ex. her/him/them)
+; Possessive Pronoun: Defaults to her (ex. her/him/them), but can be in settings.ini
 possessivePronoun_Setting := IniRead(A_ScriptDir "\settings.ini", "SETTINGS", "possessivePronoun", "her")
 global possessivePronoun := possessivePronoun_Setting
 
@@ -76,13 +76,13 @@ if (applicationHandled == "ALL") {
 
 ; Display settings summary at startup
 settingSummary_Setting := IniRead(A_ScriptDir "\settings.ini", "DEBUG", "settingSummary")
-if (settingSummary_Setting) {
+if (toBool(settingSummary_Setting)) {
 	MsgBox((LTrim(
 		"Version: " version "`n"
 		
 		"[SETTINGS]"
 		"Application Handled = " applicationHandled_Setting "`n"
-		"Bambi Mode = " bambiMode_Setting "`n"
+		"Rename Mode = " renameMode_Setting "`n"
 		"Name Replacement = " nameReplace_Setting "`n"
 		"Personal Pronoun = " personalPronoun_Setting "`n"
 		"Possessive Pronoun = " possessivePronoun_Setting "`n"

@@ -5,8 +5,6 @@
 
 loadContractionsFormal(state) {
 	if (toBool(state) == true) {
-		Hotstring("B Z0")
-
 		; Generic
 		Hotstring "::must have", "must've"
 		Hotstring("::could have", "could've")

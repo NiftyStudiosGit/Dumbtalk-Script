@@ -7,13 +7,13 @@
 
 loadContractionsFormal(formalContractions)
 loadContractionsInformal(informalContractions)
-loadBambiPronouns(bambiMode, nameReplace, possessivePronoun)
+loadPronouns(renameMode, nameReplace, possessivePronoun)
 loadGiggles(giggles)
 loadWordReplacer(wordReplacer)
-load3rdPersonVerbs(bambiMode, nameReplace)
+load3rdPersonVerbs(renameMode, nameReplace)
 loadWordsRandomizer(wordsRandomizer)
 loadPhonetic(phonetic)
-loadVerbsSynonyms(verbsSynonyms)
+loadVerbsSynonyms(verbsSynonyms, nameReplace)
 loadPunctuation(punctuation)
 if (hesitationMarks or hornyThoughts) {
 	loadHesitationsAndHornyThoughts(true)

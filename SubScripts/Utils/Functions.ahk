@@ -8,7 +8,7 @@
  * RandomStuff: List of values
  * num: Number of items in the list
  */
-randomString(RandomStuff, num) {
+randomString(name?, RandomStuff := "", num := 1) {
 	RND := Random(1, num)
 	Loop Parse RandomStuff, "|" {
 		If ( RND = A_Index ) {
@@ -25,7 +25,7 @@ randomString(RandomStuff, num) {
  * numBackspace: Number of Backspace to perform before inserting the new string
  */
 BsSendInput(string := "", numBackspace := "0") {
-	SendInput "{BS" . numBackspace . "}" . string . "{" A_EndChar "}{Space}"
+	SendInput "{BS " . numBackspace . "}" . string . "{" A_EndChar "}{Space}"
 }
 
 toBool(v) {

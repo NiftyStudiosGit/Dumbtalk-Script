@@ -5,45 +5,49 @@
 
 loadWordsRandomizer(state) {
 	if (toBool(state) == true) {
-	Hotstring("B Z")
 		
-	Hotstring(":*:yes", randomString.Bind("yis|yas|yus|yes", 4))
+	Hotstring(":z*:yes", randomString.Bind(, "yis|yas|yus|yes", 4))
 	
-	Hotstring("::your", randomString.Bind("ur|yr|", 2))
+	Hotstring(":z:your", randomString.Bind(, "ur|yr|", 2))
 
-	Hotstring("::hi", randomString.Bind("Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
-	Hotstring("::hello", randomString.Bind("Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
+	Hotstring(":z:hi", randomString.Bind(, "Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
+	Hotstring(":z:hello", randomString.Bind(, "Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
 
-	Hotstring("::goodbye", randomString.Bind("luv you, byeeee{!}|byeeee{!}|", 2))
-	Hotstring("::cya", randomString.Bind("luv you, byeeee{!}|byeeee{!}|", 2))
-	Hotstring("::bye", randomString.Bind("luv you, byeeee{!}|byeeee{!}|", 2))
+	Hotstring(":z:goodbye", randomString.Bind(, "luv you, byeeee{!}|byeeee{!}|", 2))
+	Hotstring(":z:cya", randomString.Bind(, "luv you, byeeee{!}|byeeee{!}|", 2))
+	Hotstring(":z:bye", randomString.Bind(, "luv you, byeeee{!}|byeeee{!}|", 2))
 	
-	Hotstring("::a lot of", randomString.Bind("hella|lotta|", 2))
-	Hotstring("::lot of", randomString.Bind("hella|lotta|", 2))
-	Hotstring("::lots of", randomString.Bind("hella|lotta|", 2))
+	Hotstring(":z:a lot of", randomString.Bind(, "hella|lotta|", 2))
+	Hotstring(":z:lot of", randomString.Bind(, "hella|lotta|", 2))
+	Hotstring(":z:lots of", randomString.Bind(, "hella|lotta|", 2))
 
-	Hotstring("::cool", randomString.Bind("coool|kewl|", 2))
-	Hotstring("::coolest", randomString.Bind("cooolest|kewlest|", 2))
+	Hotstring(":z:cool", randomString.Bind(, "coool|kewl|", 2))
+	Hotstring(":z:coolest", randomString.Bind(, "cooolest|kewlest|", 2))
 
-	Hotstring("::wholly", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::entirely", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::completly", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::completely", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::totaly", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::totally", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::absolutly", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::absolutely", randomString.Bind("totes|tots|totz|totally|", 4))
-	Hotstring("::greatly", randomString.Bind("totes|tots|totz|totally|", 4))
+	Hotstring(":z:wholly", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:entirely", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:completly", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:completely", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:totaly", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:totally", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:absolutly", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:absolutely", randomString.Bind(, "totes|tots|totz|totally|", 4))
+	Hotstring(":z:greatly", randomString.Bind(, "totes|tots|totz|totally|", 4))
 
-	Hotstring("::butt", randomString.Bind("booty|bum|ass|butt|", 4))
-	Hotstring("::ass", randomString.Bind("booty|bum|ass|butt|", 4))
+	Hotstring(":z:butt", randomString.Bind(, "booty|bum|ass|butt|", 4))
+	Hotstring(":z:ass", randomString.Bind(, "booty|bum|ass|butt|", 4))
 
-	Hotstring("::anus", randomString.Bind("fuckhole|pussy|butthole|", 3))
+	Hotstring(":z:anus", randomString.Bind(, "fuckhole|pussy|butthole|", 3))
 
-	Hotstring("::breasts", randomString.Bind("boobz|titties|boobs|honkers|boobies|bewbz|knockers|jugs|udders|", 9))
+	Hotstring(":z:breasts", randomString.Bind(, "boobz|titties|boobs|honkers|boobies|bewbz|knockers|jugs|udders|", 9))
 
-	Hotstring("::mouth", randomString.Bind("suckhole|mouth|", 2))
+	Hotstring(":z:mouth", randomString.Bind(, "suckhole|mouth|", 2))
 
 	Hotstring("reset")
 	}
 }
+
+handleRandom(name) {
+
+}
+

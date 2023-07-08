@@ -27,31 +27,23 @@ loadVerbsFromCSV() {
 }
 
 load3rdPersonVerbs(state, nameReplace) {
-	Hotstring("B Z")
-	; removes "'" just for this hotstring + reset automatic replacement (to avoid stuff like "bambi would likes")
-	Hotstring("EndChars", "-()[]{}:;`"/\,.?!`n`s`t")
-
 	verbList := loadVerbsFromCSV()
 	Loop(verbList.Length) {
 		pair := verbList[A_Index]
 		triggerVerb := pair["trigger"]
 		replacement := pair["replacement"]
-		Hotstring("::" . nameReplace . " " . triggerVerb, replacement)
+		Hotstring(":z:" . nameReplace . " " . triggerVerb, nameReplace . " " replacement)
 	}
 
-	Hotstring("::" . nameReplace . " talk", "talks")
-
-
 	if (toBool(state) == true) {
-
-		Hotstring(":: am", " is")
-		Hotstring("::i'm", nameReplace . " is")
-		Hotstring("::im", nameReplace . " is")
-		Hotstring(":: have", " has")
-		Hotstring("::i've", nameReplace . " has")
-		Hotstring("::ive", nameReplace . " has")
-		Hotstring("::i'll", nameReplace . " will")
-		Hotstring("::i'd", nameReplace . " would")
-		; Hotstring("reset")
+		Hotstring(":z: am", " is")
+		Hotstring(":z: have", " has")
+		Hotstring(":z:i'm", nameReplace . " is")
+		Hotstring(":z:im", nameReplace . " is")
+		Hotstring(":z:i've", nameReplace . " has")
+		Hotstring(":z:ive", nameReplace . " has")
+		Hotstring(":z:i'll", nameReplace . " will")
+		Hotstring(":z:i'd", nameReplace . " would")
+		Hotstring("reset")
 	}
 }

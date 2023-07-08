@@ -6,9 +6,13 @@
 ;------------------------------------------------------------------------------
 ; Settings (if you're a dumb bambi, you may not want to change these)
 ;------------------------------------------------------------------------------
-SetTitleMatchMode, 2 ; This let's any window that partially matches the given name get activated
-#IfWinActive, Discord ; This forces the script to only run on Discord's window
-#NoEnv ; For security
+SetTitleMatchMode 2
+handledApps := 0
+Loop(handledApps.Length) {
+    handledApp := handledApps[A_Index]
+    GroupAdd "handledApps", handledApp
+}
+#HotIf WinActive("ahk_class Notepad")
 #SingleInstance force
 
 ;------------------------------------------------------------------------------
@@ -31,7 +35,6 @@ SetTitleMatchMode, 2 ; This let's any window that partially matches the given na
 ;		\/
 ;
 ;
-#Hotstring B
 ;::Maccro::Result
 ::!bs::**BAMBI SLEEP**
 ::!gg::**GOOD GIRL**

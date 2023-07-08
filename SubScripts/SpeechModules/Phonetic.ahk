@@ -5,18 +5,17 @@
 
 loadPhonetic(state) {
 	if (toBool(state) == true) {
-		Hotstring("B Z")
 		; Place exceptions here, words which shouldn't be altered by the next hotstrings
-		Hotstring("::cock", "cock")
-		Hotstring("::suck", "suck")
+		Hotstring(":z:cock", "cock")
+		Hotstring(":z:suck", "suck")
 
 		; Phonetic alterations
-		Hotstring(":?:ck", "k")
-		Hotstring(":?:ome", "um")
-		Hotstring(":?:ewd", "ood")
-		Hotstring(":?:ph", "f")
-		Hotstring(":?:ing", "in'")
-		Hotstring(":?:ough", "uff")
+		Hotstring(":z?:ck", "k")
+		Hotstring(":z?:ome", "um")
+		Hotstring(":z?:ewd", "ood")
+		Hotstring(":z?:ph", "f")
+		Hotstring(":z?:ing", "in'")
+		Hotstring(":z?:ough", "uff")
 		Hotstring("reset")
 	}
 }

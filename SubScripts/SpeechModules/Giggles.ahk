@@ -5,7 +5,6 @@
 
 loadGiggles(state) {
 	if (toBool(state) == true) {
-		Hotstring("B Z0")
 		Hotstring("::hehe", "*giggles*")
 		Hotstring("::haha", "*giggles*")
 		Hotstring("::*laughs*", "*giggles*")
