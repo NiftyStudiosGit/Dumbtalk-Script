@@ -1,6 +1,16 @@
 # Dumbtalk Script Changelog
 
-## 2.0 (2023-07-09)
+## 2.1 (2023-07-08)
+
+### Fixes
+- Restored ability to restrict app to specific application (Only Discord, only Notepad, etc.)
+
+### Changes
+- Removed redundant extra copy of verb list.
+- Removed redunant build.bat. Not useful for this version of AHK.
+- Updated settings to restrict script to only working for Discord.
+
+## 2.0 (2023-07-07)
 
 ### Major Refactoring
 
