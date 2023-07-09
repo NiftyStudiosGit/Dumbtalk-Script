@@ -28,10 +28,6 @@ Hotstring("EndChars", "-()[]{}:;`"/\,.?!`n`s`t")
 ;------------------------------------------------------------------------------
 ; Order matters: Hotstrings in Includes at the bottom have a higher priority
 
-; Helper Files
-FileInstall "verbList.csv", "verbList.csv", 1
-FileInstall "settings.ini", "settings.ini", 1
-
 ; Utils
 #Include %A_ScriptDir%\SubScripts\Utils\Initializer.ahk
 #Include %A_ScriptDir%\SubScripts\Utils\Functions.ahk
