@@ -18,7 +18,7 @@ This script automatically replaces what you type in discord chat with more Bambi
 
 ## Instalation instructions
 
-- Download the [lastest release](https://github.com/Amanda-Cook/Dumbtalk-Script/releases) (Windows only, this is an autohotkey limitation)
+- Download the [lastest release](https://github.com/JediCat/Dumbtalk-Script/releases) (Windows only, this is an autohotkey limitation)
 - Extract the archive
 - Edit the file "settings.ini" if you wish (changes to that file are only taken into account when the script starts)
 - Double-click on the "Dumbtalk Script.exe" file to launch the script. It should now work on the Discord desktop app
