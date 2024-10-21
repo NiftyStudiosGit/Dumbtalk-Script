@@ -9,7 +9,6 @@ loadPunctuation(state,chance) {
         local Var := Random(1, 100)
 
 	if (toBool(state) == true and Var <= chance) {
-		Hotstring(":b0*:.", elipisiHandler)
 		Hotstring(":b0?:.", replacePunctuation)
 	}
 }

@@ -7,7 +7,7 @@
 ; bimbo dumbtalk script. Current changes only de-Bambi the script, allowing
 ; any name; the underlying Bambi concepts remain.
 
-version := 2.0
+version := 2.3
 #Include %A_ScriptDir%\SubScripts\Utils\Settings.ahk
 
 SetTitleMatchMode 2
