@@ -5,8 +5,11 @@
 ; Ellipses are preserved; as a consequence, ".." also isn't replaced,
 ; but that seems suitable for a bimbo, incorrectly putting double period.
 
-loadPunctuation(state) {
-	if (toBool(state) == true) {
+loadPunctuation(state,chance) {
+        local Var := Random(1, 100)
+
+	if (toBool(state) == true and Var <= chance) {
+		Hotstring(":b0*:.", elipisiHandler)
 		Hotstring(":b0?:.", replacePunctuation)
 	}
 }
