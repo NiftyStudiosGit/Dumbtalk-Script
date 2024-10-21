@@ -1,5 +1,12 @@
 # Dumbtalk Script Changelog
 
+### 2.3 (2024-10-20)
+
+### Feature Additions (couresy of Amanda-Cook, see Credits in ReadMe)
+
+- Introduced a "CommonMistakes" file, which forces correct spellings into typos
+- Introduced the ability for all changes to occur on a chance based system, instead of of occuring all the time.
+
 ### 2.2 (2023-07-??)
 
 ### Fixes
