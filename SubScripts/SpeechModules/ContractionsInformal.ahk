@@ -28,13 +28,13 @@ loadContractionsInformal(state) {
 		Hotstring(":z:would not", "wudnt")
 
 		; "you => u"
-		Hotstring(":z:you", "u") ; you => u is more interresting than having its contractions (can't have both)
-		; Hotstring(":z:you are", "u're")
-		; Hotstring(":z:you have", "u've")
-		; Hotstring(":z:you had", "u'd")
-		; Hotstring(":z:you shall", "u'll")
-		; Hotstring(":z:you will", "u'll")
-		; Hotstring(":z:you would", "u'd")
+		Hotstring(":z:you", sendU)
+		Hotstring(":z:u are", "u're")
+		Hotstring(":z:u have", "u've")
+		Hotstring(":z:u had", "u'd")
+		Hotstring(":z:u shall", "u'll")
+		Hotstring(":z:u will", "u'll")
+		Hotstring(":z:u would", "u'd")
 
 		; Other
 		Hotstring(":z:what is", "watz")
@@ -60,4 +60,10 @@ loadContractionsInformal(state) {
 		Hotstring(":z:want to", "wanna")
 		Hotstring("reset")
 	}
+}
+
+sendU(name) {
+	SendLevel 1
+	SendEvent "u "
+	SendLevel 0
 }

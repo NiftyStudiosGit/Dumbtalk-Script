@@ -1,26 +1,27 @@
 ;------------------------------------------------------------------------------
 ; Punctuation
 ;------------------------------------------------------------------------------
-; Randomly turns periods into questions, exclamations or tilde
+; Randomly turns periods into questions, exclamations or tilde.
+; Ellipses are preserved; as a consequence, ".." also isn't replaced,
+; but that seems suitable for a bimbo, incorrectly putting double period.
 
 loadPunctuation(state) {
 	if (toBool(state) == true) {
-		Hotstring(":b0*:.", elipisiHandler)
 		Hotstring(":b0?:.", replacePunctuation)
 	}
 }
 
-elipisiHandler(name) { ; Prevents elipsis "..." to be replaced
-	SendInput "{BS 1}.{" A_EndChar "}"
-}
-
 replacePunctuation(name) {
-	nRand := Random(0, 90)
-	if (nRand < 10)	{
-		BsSendInput("?", 2)
-	} else if (nRand < 30) {
-		SendInput "{BS 2}~{Space}{Space}"
-	} else if (nRand < 40) {
-		BsSendInput("{!}", 2)
+	static lastEndChar := "" ; Prevents elipsis "..." to be replaced
+	if A_EndChar != "." and lastEndChar != "." {
+		nRand := Random(0, 90)
+		if (nRand < 10)	{
+			BsSendInput("?", 2)
+		} else if (nRand < 30) {
+			SendInput "{BS 2}~{Space}{Space}"
+		} else if (nRand < 40) {
+			BsSendInput("{!}", 2)
+		}
 	}
+	lastEndChar := A_EndChar
 }

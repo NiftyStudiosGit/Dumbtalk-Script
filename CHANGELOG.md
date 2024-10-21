@@ -1,11 +1,33 @@
 # Dumbtalk Script Changelog
 
+### 2.2 (2023-07-??)
+
+### Fixes
+
+- Fixed elipses handling, so they should no longer be replaced by the period replacer ("." -> "!"/"~"/"?")
+- Original script couldn't handle both ("you" -> "u") and ("you have" -> "u've", etc.) simultaneously; now it can.
+
+### Word Changes
+
+- Updated with 46 new formal contractions ("who is" -> "who's", "there will" -> "there'll", "where did" -> "where'd", etc)
+- Three new phonetic replacements:
+  - Words ending in "dom" will end in "dum" (though "dom" itself is excluded, to respect dom's)
+  - Words ending in "tion" will end in "shun"
+  - Words ending in "er" will end in "r" (this one may be excessive; let me know)
+- "good" will now become either "gud" or "gewd"
+- "oh" will now become "oo", "ooo", or "ooooo"
+- "vagina" -> "pussy"
+- "right" -> "rite"
+- "ikr" -> "omg, rite?"
+
 ## 2.1 (2023-07-08)
 
 ### Fixes
+
 - Restored ability to restrict app to specific application (Only Discord, only Notepad, etc.)
 
 ### Changes
+
 - Removed redundant extra copy of verb list.
 - Removed redunant build.bat. Not useful for this version of AHK.
 - Updated settings to restrict script to only working for Discord.

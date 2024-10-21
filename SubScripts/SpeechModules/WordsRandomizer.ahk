@@ -14,6 +14,10 @@ loadWordsRandomizer(state) {
 	Hotstring(":z:hello", randomString.Bind(, "Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
 
 	Hotstring(":z:goodbye", randomString.Bind(, "luv you, byeeee{!}|byeeee{!}|", 2))
+	Hotstring("::good", randomString.Bind(, "gud|gewd", 2))
+
+	Hotstring("::oh", randomString.Bind(, "oo|ooo|ooooo", 2))
+
 	Hotstring(":z:cya", randomString.Bind(, "luv you, byeeee{!}|byeeee{!}|", 2))
 	Hotstring(":z:bye", randomString.Bind(, "luv you, byeeee{!}|byeeee{!}|", 2))
 	
