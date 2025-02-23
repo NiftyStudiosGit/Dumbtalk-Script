@@ -29,14 +29,14 @@ loadContractionsInformal(state,chance) {
 		Hotstring(":z:will not", "wont")
 		Hotstring(":z:would not", "wudnt")
 
-		; "you => u"
-		Hotstring(":z:you", sendU)
-		Hotstring(":z:u are", "u're")
-		Hotstring(":z:u have", "u've")
-		Hotstring(":z:u had", "u'd")
-		Hotstring(":z:u shall", "u'll")
-		Hotstring(":z:u will", "u'll")
-		Hotstring(":z:u would", "u'd")
+		; "you => you"
+		Hotstring(":z:you", sendYou)
+		Hotstring(":z:you are", "you're")
+		Hotstring(":z:you have", "you've")
+		Hotstring(":z:you had", "you'd")
+		Hotstring(":z:you shall", "you'll")
+		Hotstring(":z:you will", "you'll")
+		Hotstring(":z:you would", "you'd")
 
 		; Other
 		Hotstring(":z:what is", "watz")
