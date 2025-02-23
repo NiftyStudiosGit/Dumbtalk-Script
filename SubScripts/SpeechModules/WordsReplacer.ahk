@@ -36,6 +36,9 @@ loadWordReplacer(state,chance) {
 		Hotstring("::vagina", "pussy")
 		Hotstring("::right", "rite")
 		Hotstring("::ikr", "omg, rite?")
+		Hotstring("::sure", "nya~")
+		Hotstring("::mm-hmm", "nya~")
+		Hotstring("::boner", "wet boypussy")
 		Hotstring("reset")
 	}
 
