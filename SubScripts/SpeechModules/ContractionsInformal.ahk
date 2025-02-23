@@ -30,7 +30,7 @@ loadContractionsInformal(state,chance) {
 		Hotstring(":z:would not", "wudnt")
 
 		; "you => you"
-		Hotstring(":z:you", sendyou)
+		Hotstring(":z:you", sendU)
 		Hotstring(":z:you are", "you're")
 		Hotstring(":z:you have", "you've")
 		Hotstring(":z:you had", "you'd")
