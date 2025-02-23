@@ -9,8 +9,6 @@ loadWordsRandomizer(state,chance) {
 	if (toBool(state) == true and Var <= chance) {
 		
 	Hotstring(":z*:yes", randomString.Bind(, "yis|yas|yus|yes", 4))
-	
-	Hotstring(":z:your", randomString.Bind(, "ur|yr|", 2))
 
 	Hotstring(":z:hi", randomString.Bind(, "Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
 	Hotstring(":z:hello", randomString.Bind(, "Hiya{!}|Heya{!}|Hellooo{!}|Like, Hi{!}|", 4))
