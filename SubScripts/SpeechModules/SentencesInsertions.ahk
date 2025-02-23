@@ -24,7 +24,7 @@ insertHesitationsAndHornyThoughts(name) {
 		if (toBool(hesitationMarks)) {
 			Var := Random(1, 5) ; 1 chance out of 5 to trigger this if we enter this block
 			if (var = 1) {
-				sStrings := "like... |like, |like, |hmm... |like... |uhhh... |ummm... |um |er |uh |"
+				sStrings := "like... |like, |like, |hmm... |like... |uhhh... |ummm... |um, |er, |uh, |"
 				randomString(,sStrings, 10)
 			}
 		}
@@ -58,7 +58,7 @@ insertsThoughtsBetweenWords() {
 	if (var = 1) {
 		SendInput "{BS 1}"
 		; SendInput {left 2}
-		sStrings := ", like, | hmmm... | uhhh... | ummm... | um | er | uh |"
+		sStrings := ", like, | hmmm... | uhhh... | ummm... | um, | er, | uh, |"
 		randomString(,sStrings, 7)
 		; SendInput {right 2}
 	}
